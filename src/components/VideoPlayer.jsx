@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import YouTube from 'react-youtube';
-import { Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import '../styles/VideoPlayer.css';
 import '../styles/TriviaVideoPage.css'; // Add this import for button styles
 import '../styles/QuestionTimeline.css'; // Import the CSS for QuestionTimeline
@@ -45,7 +45,8 @@ import {
 
 import {
   Chart as ChartJS,
-  BarElement,
+  LineElement, // Added
+  PointElement,
   CategoryScale,
   LinearScale,
   TimeScale,
@@ -58,7 +59,7 @@ import useFaceMesh from '../hooks/useFaceMesh';
 import QuestionTimeline from './QuestionTimeline'; // Import the new component
 
 import EyeDebugger from './EyeDebugger';
-ChartJS.register(BarElement, CategoryScale, LinearScale, TimeScale, Title, Tooltip, Legend);
+ChartJS.register(LineElement,PointElement, CategoryScale, LinearScale, TimeScale, Title, Tooltip, Legend);
 
 window.noStop = false;
 
@@ -1076,7 +1077,7 @@ function VideoPlayer({ lectureInfo, mode, onVideoPlayerReady }) {
             className="results-plot-chart"
           >
             <h3>Focus Results Over Time</h3>
-            <Bar
+            <Line
               data={resultsChartData}
               options={{
                 maintainAspectRatio: false,
@@ -1095,7 +1096,7 @@ function VideoPlayer({ lectureInfo, mode, onVideoPlayerReady }) {
             className="results-plot-chart"
           >
             <h3>Focus Results All Watchers</h3>
-            <Bar
+            <Line
               data={resultsAllChartData}
               options={{
                 maintainAspectRatio: false,
