@@ -245,7 +245,7 @@ function PlaylistView() {
                 onChange={(e) => setEditedName(e.target.value)}
                 autoFocus
                 className="playlist-name-input"
-                maxLength={255}
+                maxLength={50}
               />
               <div className="edit-actions">
                 <button 
