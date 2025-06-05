@@ -350,16 +350,16 @@ function PlaylistView() {
             <p>Owner: {playlistData.playlist_owner_name}</p>
           </div>
           {subscriberCount !== null && (
-            <div className="subscriber-actions-group">
+            <>
               <p>Subscribers: {subscriberCount}</p>
               <button className="subscribe-button" onClick={() => setShowSubscribeModal(true)}>
-                Add
+                Add Subscriber
               </button>
               |
               <button className="unsubscribe-button" onClick={() => setShowUnsubscribeModal(true)}>
-                Remove
+                Remove Subscription
               </button>
-            </div>
+            </>
           )}
         </div>
         <div className="content-grid-playlist">
