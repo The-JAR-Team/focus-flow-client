@@ -30,7 +30,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 /* Match input precisely to title */
@@ -102,13 +102,6 @@
 
 .video-delete-button:hover {
     background-color: rgba(255, 0, 0, 1);
-}
-
-.playlist-header{
-    display: grid;
-    justify-content: center;
-    margin: 1.5rem auto;
-    padding: 0.5rem 1rem;
 }
 
 .edit-icon {
@@ -207,15 +200,9 @@
     align-items: center;
     gap: 0.5rem;
     margin-top: 0.5rem;
-    justify-content: flex-start;
+    justify-content: center;
     position: relative;
-    /* right: -25px; */
-}
-
-.playlist-owner{
-    display: flex;
-    align-items: left;
-    justify-content: left;
+    right: -25px;
 }
 
 .subscribe-button,

@@ -345,10 +345,8 @@ function PlaylistView() {
               </div>
             )}
           </div>
-          
-          <div className='playlist-owner'>
-            <p>Owner: {playlistData.playlist_owner_name}</p>
-          </div>
+
+          <p>Owner: {playlistData.playlist_owner_name}</p>
           {subscriberCount !== null && (
             <>
               <p>Subscribers: {subscriberCount}</p>
