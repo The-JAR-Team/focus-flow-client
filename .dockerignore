@@ -5,8 +5,6 @@ dist
 .gitignore
 Dockerfile
 Dockerfile.*
-.dockerignore
 .vscode
 *.md
-public/models/*.onnx
-copy-model.js
+# keep copy-model.js (do not list it here)
