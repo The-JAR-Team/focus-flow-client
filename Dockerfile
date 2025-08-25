@@ -27,8 +27,9 @@ FROM nginx:1.27-alpine AS runtime
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/focusflow.conf /etc/nginx/conf.d/focusflow.conf
 
-# Copy build output
-COPY --from=build /app/dist/ /usr/share/nginx/html/
+# Copy build output into subdirectory matching Vite base path
+RUN mkdir -p /usr/share/nginx/html/focus-flow-client
+COPY --from=build /app/dist/ /usr/share/nginx/html/focus-flow-client/
 
 # Expose port
 EXPOSE 80
