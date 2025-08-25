@@ -9,10 +9,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "copy-model": "powershell Copy-Item -Path ./public/models/engagement_multitask_v4.onnx -Destination ./dist/models/ -Force",
-    "setup-model": "node copy-model.js",
-    "postbuild": "npm run copy-model",
-    "predev": "npm run setup-model"
+  "copy-model": "node copy-model.js",
+  "setup-model": "node copy-model.js",
+  "postbuild": "node copy-model.js",
+  "predev": "node copy-model.js"
   },
   "dependencies": {
     "@mediapipe/camera_utils": "^0.3.1675466862",
