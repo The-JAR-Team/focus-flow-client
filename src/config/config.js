@@ -1,12 +1,12 @@
 export const config = {
     baseURL: 'http://localhost:5000', // Change this according to your backend URL
-    baseURL: '/api', // Change this according to your backend URL
+    baseURL: 'https://focus-flow-server-465005663226.me-west1.run.app/api', // Change this according to your backend URL
     // baseURL: 'https://focus-flow-236589840712.me-west1.run.app',
     // baseURL: 'https://focus-flow-server-465005663226.me-west1.run.app',
     
 };
 
-export const BASE_URL = '/api';
+export const BASE_URL = 'https://focus-flow-server-465005663226.me-west1.run.app/api';
 
 // Constants for model operations
 export const ONNX_CONFIG = {
