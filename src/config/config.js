@@ -8,7 +8,7 @@ export const config = {
 };
 
 //export const BASE_URL = 'https://focus-flow-server-465005663226.me-west1.run.app/api';
-export const BASE_URL = 'focusflow.art/api';
+export const BASE_URL = 'https://focusflow.art/api';
 // Constants for model operations
 export const ONNX_CONFIG = {
   // Whether to use fallback server processing if local inference fails
