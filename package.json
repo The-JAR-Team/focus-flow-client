@@ -9,16 +9,17 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "copy-model": "powershell Copy-Item -Path ./public/models/engagement_multitask_v4.onnx -Destination ./dist/models/ -Force",
-    "setup-model": "node copy-model.js",
-    "postbuild": "npm run copy-model",
-    "predev": "npm run setup-model"
+  "copy-model": "node copy-model.js",
+  "setup-model": "node copy-model.js",
+  "postbuild": "node copy-model.js",
+  "predev": "node copy-model.js"
   },
   "dependencies": {
     "@mediapipe/camera_utils": "^0.3.1675466862",
     "@mediapipe/face_mesh": "^0.4.1633559619",
     "@reduxjs/toolkit": "^2.6.1",
     "axios": "^1.8.4",
+    "chart.js": "^4.5.0",
     "onnxruntime-web": "^1.22.0",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",

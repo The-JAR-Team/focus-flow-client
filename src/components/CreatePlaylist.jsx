@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import '../styles/createPlaylist.css';
+import '../styles/CreatePlaylist.css';
 import { createPlaylist} from '../services/playlistService';
 import { toast } from 'react-toastify';
 

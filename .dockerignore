@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+dist
+.git
+.gitignore
+Dockerfile
+Dockerfile.*
+.vscode
+*.md
+# keep copy-model.js (do not list it here)

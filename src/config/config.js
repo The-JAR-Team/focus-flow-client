@@ -1,12 +1,14 @@
 export const config = {
     //baseURL: 'http://localhost:5000', // Change this according to your backend URL
+    //baseURL: 'https://focus-flow-server-465005663226.me-west1.run.app/api', // Change this according to your backend URL
+    baseURL: 'https://focusflow.art/api',
     // baseURL: 'https://focus-flow-236589840712.me-west1.run.app',
-    baseURL: 'https://focus-flow-server-465005663226.me-west1.run.app',
+    // baseURL: 'https://focus-flow-server-465005663226.me-west1.run.app',
     
 };
 
-export const BASE_URL = 'https://focus-flow-server-465005663226.me-west1.run.app';
-
+//export const BASE_URL = 'https://focus-flow-server-465005663226.me-west1.run.app/api';
+export const BASE_URL = 'https://focusflow.art/api';
 // Constants for model operations
 export const ONNX_CONFIG = {
   // Whether to use fallback server processing if local inference fails
