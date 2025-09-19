@@ -129,7 +129,7 @@ const PlaylistSummaryView = () => {
     text += `Subject: ${videoData.subject} | Length: ${videoData.length}\n`;
     text += `${'='.repeat(50)}\n\n`;
 
-    videoData.summary.summary.Subject.forEach((subject, index) => {
+    videoData.summary?.summary?.Subject?.forEach((subject, index) => {
       text += `${index + 1}. ${subject.subject_title}\n`;
       text += `Time: ${formatTime(subject.subject_start_time)} - ${formatTime(subject.subject_end_time)}\n\n`;
       
@@ -140,8 +140,8 @@ const PlaylistSummaryView = () => {
       }
       
       text += `Key Points:\n`;
-      subject.sub_summaries.forEach((subSummary) => {
-        subSummary.properties.forEach((prop) => {
+      subject.sub_summaries?.forEach((subSummary) => {
+        subSummary.properties?.forEach((prop) => {
           text += `• [${formatTime(prop.source_start_time)} - ${formatTime(prop.source_end_time)}] ${prop.summary_text}\n`;
         });
       });
@@ -324,7 +324,7 @@ const PlaylistSummaryView = () => {
 
               {/* Summary Content - Clean Text Format */}
               <div className="summary-text-content">
-                {videoData.summary.summary.Subject.map((subject, subjectIndex) => (
+                {videoData.summary?.summary?.Subject?.map((subject, subjectIndex) => (
                   <div key={subjectIndex} className="subject-text-block">
                     <h3>{subject.subject_title}</h3>
                     <p className="time-info">({formatTime(subject.subject_start_time)} - {formatTime(subject.subject_end_time)})</p>
@@ -341,9 +341,9 @@ const PlaylistSummaryView = () => {
 
                     <div className="detailed-points">
                       <h4>Key Points:</h4>
-                      {subject.sub_summaries.map((subSummary, subIndex) => (
+                      {subject.sub_summaries?.map((subSummary, subIndex) => (
                         <div key={subIndex} className="points-group">
-                          {subSummary.properties.map((prop, propIndex) => (
+                          {subSummary.properties?.map((prop, propIndex) => (
                             <div key={propIndex} className="summary-point-simple">
                               <span className="time-marker">
                                 [{formatTime(prop.source_start_time)} - {formatTime(prop.source_end_time)}]
